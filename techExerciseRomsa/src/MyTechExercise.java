@@ -27,7 +27,14 @@ public class MyTechExercise extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Hello World!");
+		try {
+			DBConnection.getDBConnection();
+			response.getWriter().append("Hello World!");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	/**
