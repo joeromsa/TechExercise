@@ -31,7 +31,7 @@ public class RegistryFormInsert extends HttpServlet {
 		String model = request.getParameter("model");
 		String year = request.getParameter("year");
 		
-		String license = "ABC 123";
+		String license = LisenceFinder.assignLisence();
 		
 		Connection connection = null;
 		String insertSql = " INSERT INTO techExRomsaTable (id, fname, lname, address, carmake, carmodel, caryear, license) values (default, ?, ?, ?, ?, ?, ?, ?)";
