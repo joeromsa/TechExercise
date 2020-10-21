@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+header {
+    background-color:#f54242;
+    color:black;
+    text-align:center;
+    padding:5px;	 
+}
+nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:100%;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+section {
+    width:350px;
+    float:left;
+    padding:10px;	 	 
+}
+
+</style>
+</head>
+
+<body>
+<header>
+<h1> New Car Registry </h1>
+</header>
+
+<nav>
+<a href="/webproject/simpleFormSearch.html">Search Registry</a> <br>
+</nav>
+
+<section>
+	<h1>Driver and Car Information</h1>
+	
+	<form action="RegistryFormInsert" method="POST">
+	
+        First Name: <input type="text" name="fname"> <br />
+        Last Name: <input type="text" name="lname"> <br />
+        Address: <input type="text" name="address"> <br /><br />
+        
+        Make: <input type="text" name="make"> <br />
+        Model: <input type="text" name="model"> <br />
+        Year: <input type="text" name="year"> <br /><br />
+		
+		<input type="submit" value="Submit" />
+	</form>
+
+</section>
+</body>
+</html>
