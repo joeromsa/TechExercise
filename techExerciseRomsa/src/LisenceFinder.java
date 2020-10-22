@@ -42,10 +42,11 @@ public class LisenceFinder {
 	            se.printStackTrace();
 	         }
 	      }
+		
+		
 		System.out.println(last);
 		int i = Integer.parseInt(last.substring(4));
 		i++;
-		
 		String newLicense = last.substring(0, 4);
 		newLicense = newLicense + Integer.toString(i);
 		

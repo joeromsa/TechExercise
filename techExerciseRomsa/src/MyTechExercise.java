@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,13 +29,19 @@ public class MyTechExercise extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		try {
-			DBConnection.getDBConnection();
-			response.getWriter().append("Hello World!");
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+	    String title = "License Lookup and Registry";
+	    String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
+	            "transitional//en\">\n"; //
+	    out.println(docType + //
+	            "<html>\n" + //
+	            "<head><title>" + title + "</title></head>\n" + //
+	            "<body bgcolor=\"#f0f0f0\">\n" + //
+	            "<h1 align=\"center\">" + title + "</h1>\n");
+	    out.println("<a href=/techExerciseRomsa/registryInsert.html>Register Car</a> <br>");
+	    out.println("<a href=/techExerciseRomsa/registryLookup.html>Search License Plate</a> <br>");
+        out.println("</body></html>");
 		
 	}
 

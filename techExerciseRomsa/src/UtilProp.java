@@ -8,7 +8,7 @@ public class UtilProp {
 	static final boolean _W = System.getProperty("os.name").toLowerCase().contains("windows");
 	static String _PROP_FILENAME_WIN_LOCAL = "C:\\Users\\joe\\git\\TechExercise\\techExerciseRomsa\\WebContent\\config.properties";
 	
-	static String _PROP_FILENAME_REMOTE = "/var/lib/tomcat7/webapps/webproject/config.properties";
+	static String _PROP_FILENAME_REMOTE = "/var/lib/tomcat7/webapps/techExerciseRomsa/config.properties";
 	static Properties prop = new Properties();
 	
 	public static void loadProperty() throws Exception {
