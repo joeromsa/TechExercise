@@ -55,7 +55,7 @@ public class RegistryFormLookup extends HttpServlet {
 	    	
 	    	ResultSet rs = preparedStatement.executeQuery();
 	    	
-	    	while (rs.next()) {
+	    	if (rs.next()) {
 	    		String fName = rs.getString("fname").trim();
 	    		String lName = rs.getString("lname").trim();
 	    		String address = rs.getString("address").trim();
@@ -63,12 +63,15 @@ public class RegistryFormLookup extends HttpServlet {
 	    		String model = rs.getString("carmodel").trim();
 	    		String year = rs.getString("caryear").trim();
 	    		
-	    		out.println("First Name: " + fName + ", ");
-	    		out.println("Last Name: " + lName + ", ");
-	    		out.println("Address: " + address + ", ");
-	    		out.println("Car Make: " + make + ", ");
-	    		out.println("Car Model: " + model + ", ");
-	    		out.println("Car Year: " + year + "<br>");
+	    		out.println("First Name: " + fName + "<br>");
+	    		out.println("Last Name: " + lName + "<br>");
+	    		out.println("Address: " + address + "<br>");
+	    		out.println("Car Make: " + make + "<br>");
+	    		out.println("Car Model: " + model + "<br>");
+	    		out.println("Car Year: " + year + "<br><br>");
+	    	}
+	    	else {
+	    		out.println("No entry found <br><br>");
 	    	}
 	    	
 	    	out.println("<a href=/techExerciseRomsa/registryLookup.html>Search License Plate</a> <br>");
