@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<style>
+            body {
+                background-color: #f0f0f0;
+            }
+			header {
+			    background-color:#f54242;
+			    color:black;
+			    text-align:center;
+			    padding:5px;	 
+			}
+			nav {
+			    line-height:30px;
+			    background-color:#eeeeee;
+			    height:300px;
+			    width:100px;
+                height: 100%;
+			    float:left;
+			    padding:5px;	      
+			}
+			section {
+			    width:350px;
+			    float:left;
+			    padding:10px;	 	 
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1> Search License Plate</h1>
+		</header>
+
+		<nav>
+			<a href="/techExerciseRomsa/registryInsert.html">Register Car</a> <br>
+		</nav>
+
+		<section>
+			<h1>Input License Plate</h1>
+			
+			<form action="RegistryFormLookup" method="POST">
+			
+				License Plate: <input type="text" name="license"> <br />
+				
+				<input type="submit" value="Search" />
+			</form>
+		
+		</section>
+	</body>
+</html>
