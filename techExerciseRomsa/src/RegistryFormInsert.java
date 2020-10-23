@@ -77,7 +77,7 @@ public class RegistryFormInsert extends HttpServlet {
 
 	            "</ul>\n");
 
-	      out.println("<a href=/techExerciseRomsa/simpleFormSearch.html>Search License</a> <br>");
+	      out.println("<a href=/techExerciseRomsa/registryLookup.html>Search License</a> <br>");
 	      out.println("</body></html>");
 	}
 

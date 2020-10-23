@@ -46,11 +46,17 @@ public class LisenceFinder {
 		
 		System.out.println(last);
 		int i = Integer.parseInt(last.substring(4));
-		i++;
+		
+		if (i < 999) {
+			i++;
+		}
+		else {
+			i = 100;
+			
+		}
+		
 		String newLicense = last.substring(0, 4);
 		newLicense = newLicense + Integer.toString(i);
-		
-		
 		
 		
 		return newLicense;
